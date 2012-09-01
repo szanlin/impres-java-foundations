@@ -516,8 +516,10 @@
 <li>属性说明：用来描述相同对象的静态特征。</li>
 <li>方法说明：用来描述相同对象的动态特征。</li>
 </ul>
+<p>所有的类都是java.lang.Object的子类</p>
 <h2>对象</h2>
-<p>对象是类的实例，任何一个对象都是隶属于某个类的</p>
+<p>所有的Java对象都是通过new关键生成</p>
+<p>对象是类的实例</p>
 </section>
               
           </div>
@@ -548,10 +550,10 @@
               
                   <section><h2>多态 polymorphism</h2>
 <p>多态是类具有表现多种形态的能力的特征，在OO中是指语言具有根据对象的类型以不同方式处理之，特别是重载方法和继承类这种形式的能力</p>
-<pre><div class="highlight"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1</span> Animal a1 <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">new</span> Cat<span style="color: #666666">();</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2</span> Animal a2 <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">new</span> Dog<span style="color: #666666">();</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">3</span> a1<span style="color: #666666">.</span><span style="color: #7D9029">eat</span><span style="color: #666666">();</span> <span style="color: #408080; font-style: italic">//eat fish,rats</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">4</span> a2<span style="color: #666666">.</span><span style="color: #7D9029">eat</span><span style="color: #666666">();</span> <span style="color: #408080; font-style: italic">//eat bones,meat</span>
+<pre><div class="highlight"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1</span> Animal a1 <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">new</span> Elephant<span style="color: #666666">();</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2</span> Animal a2 <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">new</span> Bird<span style="color: #666666">();</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">3</span> a1<span style="color: #666666">.</span><span style="color: #7D9029">getLegs</span><span style="color: #666666">();</span>  <span style="color: #408080; font-style: italic">// 4</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">4</span> a2<span style="color: #666666">.</span><span style="color: #7D9029">getLegs</span><span style="color: #666666">();</span>  <span style="color: #408080; font-style: italic">// 2</span>
 </pre></div>
 </pre>
 <h2>重载 overload</h2>
@@ -611,12 +613,14 @@
               
                   <section><h2>包 package</h2>
 <p>默认的包为java.lang</p>
+<ul>
+<li>组织代码结构</li>
+<li>访问控制</li>
+</ul>
 <blockquote>
-<p>eg: com.ztesec.owls.struts</p>
+<p>eg: com.ztesec.impress</p>
 </blockquote>
 <h2>对象的初始化</h2>
-<p>所有的Java对象都是通过new关键生成</p>
-<p>所有的类都是java.lang.Object的子类</p>
 <p>初始化顺序</p>
 <ol>
 <li>父类的静态成员</li>
@@ -633,12 +637,52 @@
               
                   <section><ul>
 <li>操作符: + - * / </li>
-<li>位运算: &gt;&gt;,&lt;&lt;,&gt;&gt;&gt;(无符号)，&amp;, | </li>
+<li>位运算: &gt;&gt;,&lt;&lt;,&gt;&gt;&gt;，&amp;, | </li>
 <li>访问控制: package,private,protect,public</li>
 <li>逻辑运行: if-else,for,do-while,switch ("goto")</li>
-<li>final: 不可改变，不能覆写</li>
+<li>static</li>
+<li>final</li>
 <li>try-catch-finally</li>
 <li>Exception handler</li>
+</ul>
+</section>
+              
+          </div>
+        
+          <div class="slide">
+              <header><h1>基础知识</h1></header>
+              
+                  <section><h2>源文件</h2>
+<pre><div class="highlight"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1</span> <span style="color: #008000; font-weight: bold">public</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">HelloWorld</span><span style="color: #666666">{</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2</span>     <span style="color: #008000; font-weight: bold">public</span> <span style="color: #008000; font-weight: bold">static</span> <span style="color: #0000FF">main</span><span style="color: #666666">(</span>String<span style="color: #666666">[]</span> args<span style="color: #666666">){</span>            
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">3</span>         System<span style="color: #666666">.</span><span style="color: #7D9029">out</span><span style="color: #666666">.</span><span style="color: #7D9029">println</span><span style="color: #666666">(</span><span style="color: #BA2121">&quot;Hello World!&quot;</span><span style="color: #666666">);</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">4</span>     <span style="color: #666666">}</span>
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">5</span> <span style="color: #666666">}</span>
+</pre></div>
+</pre>
+<p><a href="java-simple-codestyle.html">编程规范</a></p>
+<h2>编译</h2>
+<pre><div class="highlight"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1</span> javac HelloWorld.java
+</pre></div>
+</pre>
+<h2>运行</h2>
+<pre><div class="highlight"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1</span> java HelloWorld
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2</span> 
+<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">3</span> Hello World!
+</pre></div>
+</pre>
+</section>
+              
+          </div>
+        
+          <div class="slide">
+              <header><h1>基础总结</h1></header>
+              
+                  <section><ul>
+<li>Java中一切都是对象</li>
+<li>通过引用来维护对象</li>
+<li>代码运行在虚拟机之上</li>
+<li>内存不需要自己维护</li>
 </ul>
 </section>
               
@@ -650,13 +694,18 @@
                   <section><ul>
 <li>List:ArrayList</li>
 <li>LinkedList</li>
+<li>Iterator</li>
 <li>Stack</li>
 <li>Set: HashSet,TreeSet</li>
 <li>Map: HashMap,LinkedHashMap,TreeMap</li>
 <li>Queue</li>
-<li>Iterator</li>
 </ul>
 </section>
+              
+          </div>
+        
+          <div class="slide">
+              <header><h1>java.util.List</h1></header>
               
           </div>
         
@@ -671,7 +720,9 @@
 <pre><div class="highlight"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1</span> String s <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;abc&quot;</span><span style="color: #666666">;</span>
 <span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2</span> s <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;123&quot;</span> <span style="color: #666666">+</span> s <span style="color: #666666">+</span> <span style="color: #BA2121">&quot;suspend&quot;</span><span style="color: #666666">;</span>    <span style="color: #408080; font-style: italic">//&quot;123abcsuspend&quot;</span>
 </pre></div>
-</pre></section>
+</pre>
+<h2>StringBuilder</h2>
+<h2>StringBuffer</h2></section>
               
           </div>
         

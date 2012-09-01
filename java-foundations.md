@@ -88,10 +88,14 @@ JDK实用工具
 - 属性说明：用来描述相同对象的静态特征。
 - 方法说明：用来描述相同对象的动态特征。
 
+所有的类都是java.lang.Object的子类
 
 对象
 -------
-对象是类的实例，任何一个对象都是隶属于某个类的
+所有的Java对象都是通过new关键生成
+
+对象是类的实例
+
 
 ---
 
@@ -123,10 +127,10 @@ JDK实用工具
 多态是类具有表现多种形态的能力的特征，在OO中是指语言具有根据对象的类型以不同方式处理之，特别是重载方法和继承类这种形式的能力
 
     !java
-    Animal a1 = new Cat();
-    Animal a2 = new Dog();
-    a1.eat(); //eat fish,rats
-    a2.eat(); //eat bones,meat
+    Animal a1 = new Elephant();
+    Animal a2 = new Bird();
+    a1.getLegs();  // 4
+    a2.getLegs();  // 2  
 
 
 重载 overload
@@ -179,15 +183,14 @@ JDK实用工具
 ----------
 默认的包为java.lang
 
+- 组织代码结构
+- 访问控制
 
-> eg: com.ztesec.owls.struts
+
+> eg: com.ztesec.impress
 
 对象的初始化
 ----------
-所有的Java对象都是通过new关键生成
-
-所有的类都是java.lang.Object的子类
-
 初始化顺序
 
 1. 父类的静态成员
@@ -200,25 +203,74 @@ JDK实用工具
 基础知识
 ====
 - 操作符: + - * / 
-- 位运算: >>,<<,>>>(无符号)，&, | 
+- 位运算: >>,<<,>>>，&, | 
 - 访问控制: package,private,protect,public
 - 逻辑运行: if-else,for,do-while,switch ("goto")
-- final: 不可改变，不能覆写
+- static
+- final
 - try-catch-finally
 - Exception handler
 
+
 ---
+
+基础知识
+====
+源文件 
+------
+    !java
+    public class HelloWorld{
+        public static main(String[] args){            
+            System.out.println("Hello World!");
+        }
+    }
+
+[编程规范](java-simple-codestyle.html)
+
+编译
+-------
+    !sh
+    javac HelloWorld.java
+
+运行
+-------
+    !sh
+    java HelloWorld
+
+    Hello World!
+
+---
+
+基础总结
+======
+
+- Java中一切都是对象
+- 通过引用来维护对象
+- 代码运行在虚拟机之上
+- 内存不需要自己维护
+
+---
+
 java.util.*
 ==========
 - List:ArrayList
 - LinkedList
+- Iterator
 - Stack
 - Set: HashSet,TreeSet
 - Map: HashMap,LinkedHashMap,TreeMap
 - Queue
-- Iterator
+
 
 ---
+
+java.util.List
+==========
+
+
+
+---
+
 String
 ==========
     !java
@@ -230,6 +282,22 @@ String
     !java
     String s = "abc";
     s = "123" + s + "suspend";    //"123abcsuspend"
+
+StringBuilder
+------------
+
+
+StringBuffer
+------------
+
+---
+Eclipse
+====
+
+
+
+
+
 
 
 

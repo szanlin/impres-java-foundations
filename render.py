@@ -3,11 +3,16 @@ import re
 import jinja2
 import markdown
 import pygments
+import logging
 
 from pygments.lexers import get_lexer_by_name
 from pygments.formatters import HtmlFormatter
 
-with codecs.open('java-presentation.html', 'w', encoding='utf8') as outfile:
+LOG=logging.getLogger('test')
+console = logging.StreamHandler()
+console.setLevel(logging.INFO)
+
+with codecs.open('java-presentation.html', 'w', encoding='utf8') as outfile:		
     md_src = codecs.open('java-foundations.md', encoding='utf8').read()
     slides_src = markdown.markdown(md_src).split('<hr />\n')
 
@@ -25,7 +30,8 @@ with codecs.open('java-presentation.html', 'w', encoding='utf8') as outfile:
 
             if lang_match:
                 lang = lang_match.group(1)
-                code = content.split(lang, 1)[1].split('</code', 1)[0]
+				
+                code = content.split(lang, 1)[1].split('</code>', 1)[0]
 
                 lexer = get_lexer_by_name(lang)
 
