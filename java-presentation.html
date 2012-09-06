@@ -516,10 +516,30 @@
 <li>属性说明：用来描述相同对象的静态特征。</li>
 <li>方法说明：用来描述相同对象的动态特征。</li>
 </ul>
-<p>所有的类都是java.lang.Object的子类</p>
-<h2>对象</h2>
-<p>所有的Java对象都是通过new关键生成</p>
-<p>对象是类的实例</p>
+<p>Java中所有的类都是java.lang.Object的子类</p>
+</section>
+              
+          </div>
+        
+          <div class="slide">
+              <header><h1>基础知识</h1></header>
+              
+                  <section><h2>对象</h2>
+<ul>
+<li>万事万物皆对象</li>
+<li>对象之间通过消息通信</li>
+<li>程序是由一系列的对象组成</li>
+<li>对象是类的实例</li>
+<li>对象通过new创建</li>
+<li>
+<p>存放位置</p>
+<p>Registers</p>
+<p>The stack</p>
+<p>The heap</p>
+<p>Constant storage</p>
+<p>Non-RAM storage</p>
+</li>
+</ul>
 </section>
               
           </div>
@@ -534,7 +554,7 @@
 <li>把所有的属性藏起来.</li>
 </ul>
 <h2>继承 inheritance</h2>
-<p>子类共享父类中定义的数据和方法，Java只支持单继承</p>
+<p>子类共享父类中定义的数据和方法，类的复用，Java只支持单继承</p>
 <ul>
 <li>使软件系统具有开放性</li>
 <li>更好地进行抽象与分类</li>
@@ -550,13 +570,15 @@
               
                   <section><h2>多态 polymorphism</h2>
 <p>多态是类具有表现多种形态的能力的特征，在OO中是指语言具有根据对象的类型以不同方式处理之，特别是重载方法和继承类这种形式的能力</p>
-<pre><div class="highlight"><pre style="line-height: 125%"><span style="background-color: #f0f0f0; padding: 0 5px 0 5px">1</span> Animal a1 <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">new</span> Elephant<span style="color: #666666">();</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2</span> Animal a2 <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">new</span> Bird<span style="color: #666666">();</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">3</span> a1<span style="color: #666666">.</span><span style="color: #7D9029">getLegs</span><span style="color: #666666">();</span>  <span style="color: #408080; font-style: italic">// 4</span>
-<span style="background-color: #f0f0f0; padding: 0 5px 0 5px">4</span> a2<span style="color: #666666">.</span><span style="color: #7D9029">getLegs</span><span style="color: #666666">();</span>  <span style="color: #408080; font-style: italic">// 2</span>
-</pre></div>
-</pre>
-<h2>重载 overload</h2>
+<p><img alt="polymorphism" src="img/polymorphism.png" /></p>
+</section>
+              
+          </div>
+        
+          <div class="slide">
+              <header><h1>基础知识</h1></header>
+              
+                  <section><h2>重载 overload</h2>
 <ul>
 <li>方法名相同，参数不同</li>
 <li>方法名相同，参数个数不同</li>
@@ -588,7 +610,7 @@
           <div class="slide">
               <header><h1>基础知识</h1></header>
               
-                  <section><h2>八种基本类型(非面向对象部分)</h2>
+                  <section><h2>八种基本类型</h2>
 <ul>
 <li>char</li>
 <li>byte</li>
@@ -598,11 +620,6 @@
 <li>float</li>
 <li>double</li>
 <li>boolean</li>
-</ul>
-<h2>引用类型</h2>
-<ul>
-<li>class</li>
-<li>array</li>
 </ul>
 </section>
               
@@ -721,8 +738,14 @@
 <span style="background-color: #f0f0f0; padding: 0 5px 0 5px">2</span> s <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;123&quot;</span> <span style="color: #666666">+</span> s <span style="color: #666666">+</span> <span style="color: #BA2121">&quot;suspend&quot;</span><span style="color: #666666">;</span>    <span style="color: #408080; font-style: italic">//&quot;123abcsuspend&quot;</span>
 </pre></div>
 </pre>
-<h2>StringBuilder</h2>
-<h2>StringBuffer</h2></section>
+</section>
+              
+          </div>
+        
+          <div class="slide">
+              <header><h1>Eclipse</h1></header>
+              
+                  <section><p>IDE</p></section>
               
           </div>
         

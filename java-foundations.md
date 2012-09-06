@@ -88,18 +88,31 @@ JDK实用工具
 - 属性说明：用来描述相同对象的静态特征。
 - 方法说明：用来描述相同对象的动态特征。
 
-所有的类都是java.lang.Object的子类
-
-对象
--------
-所有的Java对象都是通过new关键生成
-
-对象是类的实例
-
+Java中所有的类都是java.lang.Object的子类
 
 ---
+基础知识
+===
+对象
+-------
+- 万事万物皆对象
+- 对象之间通过消息通信
+- 程序是由一系列的对象组成
+- 对象是类的实例
+- 对象通过new创建
+- 存放位置
 
-
+	Registers
+	
+	The stack
+	
+	The heap
+	
+	Constant storage
+	
+	Non-RAM storage
+	
+---
 基础知识
 ===
 封装 wrap
@@ -111,7 +124,7 @@ JDK实用工具
 
 继承 inheritance
 -------
-子类共享父类中定义的数据和方法，Java只支持单继承
+子类共享父类中定义的数据和方法，类的复用，Java只支持单继承
 
 - 使软件系统具有开放性
 - 更好地进行抽象与分类
@@ -126,12 +139,11 @@ JDK实用工具
 ------
 多态是类具有表现多种形态的能力的特征，在OO中是指语言具有根据对象的类型以不同方式处理之，特别是重载方法和继承类这种形式的能力
 
-    !java
-    Animal a1 = new Elephant();
-    Animal a2 = new Bird();
-    a1.getLegs();  // 4
-    a2.getLegs();  // 2  
+![polymorphism](img/polymorphism.png)
 
+---
+基础知识
+=======
 
 重载 overload
 -------
@@ -160,7 +172,7 @@ JDK实用工具
 
 基础知识
 ===
-八种基本类型(非面向对象部分)
+八种基本类型
 ------
 - char
 - byte
@@ -170,11 +182,6 @@ JDK实用工具
 - float
 - double
 - boolean
-
-引用类型
--------
-- class
-- array
 
 ---
 基础知识
@@ -210,7 +217,6 @@ JDK实用工具
 - final
 - try-catch-finally
 - Exception handler
-
 
 ---
 
@@ -282,22 +288,7 @@ String
     !java
     String s = "abc";
     s = "123" + s + "suspend";    //"123abcsuspend"
-
-StringBuilder
-------------
-
-
-StringBuffer
-------------
-
 ---
 Eclipse
 ====
-
-
-
-
-
-
-
-
+IDE
