@@ -10,6 +10,8 @@ WINDOWNS 64bit 环境设置
 - [YaHei Consolas Hybrid](http://kuai.xunlei.com/d/fo-DAgI3egAODTxRcd0) 迅雷分享
 - [MarkdownPad](http://markdownpad.com/)
 > [GitHub Markdown Styled CSS](http://kevinburke.bitbucket.org/markdowncss/markdown.css)
+- [putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
+- [winscp](http://winscp.net/eng/docs/lang:chs)
 
 ##前端
 - [NodeJs](http://nodejs.org/)
@@ -21,11 +23,14 @@ WINDOWNS 64bit 环境设置
 - [YUI Compressor](http://yui.github.com/yuicompressor/)
 
 ##Java
-- [JDK6_43 ](http://kuai.xunlei.com/d/fo-DAgI3egAODTxRcd0) 迅雷分享
+- [JDK6_43 ](http://kuai.xunlei.com/d/fo-DAgJ9fADgFDxR714) 迅雷分享
 - [IntelliJ IDEA 12-C](http://download.jetbrains.com/idea/ideaIC-12.0.4.exe)
 - [ANT 1.8](http://ant.apache.org/bindownload.cgi)
 - [Maven 3.0.5](http://maven.apache.org/download.cgi) 还没怎么用,似乎都快过时了 [Gradle](http://www.gradle.org/)
 - [Tomcat7](http://tomcat.apache.org/download-70.cgi)
+
+##Oracle
+- [Sql Developer](http://kuai.xunlei.com/d/fo-DAgI3egAODTxRcd0)迅雷分享
 
 ##Python
 - [ActivePython](http://www.activestate.com/activepython/downloads)
